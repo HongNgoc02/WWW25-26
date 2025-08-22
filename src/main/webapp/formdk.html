@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Đăng Ký</title>
+    <style>
+        body { font-family: Arial, sans-serif;
+            background-color: #f4f4f4; padding: 20px;
+        }
+        .container { max-width: 600px;
+            margin: auto;background: white;
+            padding: 20px;
+            border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-group { margin-bottom: 15px; }
+        label {
+            display: block; margin-bottom: 5px; font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        textarea {
+            width: 100%; padding: 8px;
+            box-sizing: border-box; border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn-submit {
+            background-color: #5cb85c; color: white;
+            padding: 10px 15px; border: none;
+            border-radius: 4px; cursor: pointer;
+        }
+        .btn-submit:hover { background-color: #4cae4c; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Form Đăng Ký</h2>
+    <h3>Đăng ký với GET method</h3>
+    <form action="register-servlet" method="GET">
+        <div class="form-group">
+            <label for="name_get">Họ và Tên:</label>
+            <input type="text" id="name_get" name="name">
+        </div>
+        <div class="form-group">
+            <label for="username_get">Tên đăng nhập:</label>
+            <input type="text" id="username_get" name="username">
+        </div>
+        <div class="form-group">
+            <label for="password_get">Mật khẩu:</label>
+            <input type="password" id="password_get" name="password">
+        </div>
+        <button type="submit" class="btn-submit">Đăng Ký (GET)</button>
+    </form>
+
+    <hr style="margin: 30px 0;">
+
+    <h3>Đăng ký với POST method</h3>
+    <form action="register-servlet" method="POST">
+        <div class="form-group">
+            <label for="name_post">Họ và Tên:</label>
+            <input type="text" id="name_post" name="name">
+        </div>
+        <div class="form-group">
+            <label for="username_post">Tên đăng nhập:</label>
+            <input type="text" id="username_post" name="username">
+        </div>
+        <div class="form-group">
+            <label for="password_post">Mật khẩu:</label>
+            <input type="password" id="password_post" name="password">
+        </div>
+        <button type="submit" class="btn-submit">Đăng Ký (POST)</button>
+    </form>
+</div>
+
+</body>
+</html>
