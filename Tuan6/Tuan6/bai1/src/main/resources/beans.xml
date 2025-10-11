@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address1" class="fit.se.bai1.entities.Address">
+        <property name="street" value="Nguyen Van Bao"/>
+        <property name="city" value="HCM"/>
+        <property name="country" value="Viet Nam"/>
+    </bean>
+
+    <bean id="address2" class="fit.se.bai1.entities.Address">
+        <property name="street" value="Nguyen Thai Son"/>
+        <property name="city" value="HCM"/>
+        <property name="country" value="Viet Nam"/>
+    </bean>
+
+    <bean id="person" class="fit.se.bai1.entities.Person">
+        <property name="name" value="Nguyen Van A1"/>
+
+        <property name="addresses">
+            <list>
+                <ref bean="address1"/>
+                <ref bean="address2"/>
+            </list>
+        </property>
+
+        <property name="emails">
+            <list>
+                <value>a1@gmail.com</value>
+                <value>a1@yopmail.com</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>
